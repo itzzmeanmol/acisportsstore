@@ -4,7 +4,9 @@ import { Observable } from 'rxjs';
 import { Product } from './product.model';
 import { Order } from './order.model';
 const PROTOCOL = "http";
-const PORT = 5500;
+const PORT = 8080;
+
+
 
 @Injectable()
 export class RestDataSource{
@@ -15,7 +17,7 @@ export class RestDataSource{
     }
 
     getProducts(): Observable<Product[]>{
-        return this.http.get<Product[]>(this.baseUrl + "products");
+        return this.http.get<Product[]>(this.baseUrl + "api/products/all");
     }
 
     saveOrder(order: Order): Observable<Order>{
