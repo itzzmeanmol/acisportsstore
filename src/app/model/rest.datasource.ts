@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Product } from './product.model';
 import { Order } from './order.model';
 const PROTOCOL = "http";
-const PORT = 8080;
+const PORT = 7070;
 
 
 
